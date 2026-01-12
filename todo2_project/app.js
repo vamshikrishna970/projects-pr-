@@ -19,13 +19,22 @@ btn.addEventListener("click", function() {
     input.value = "";
 
 });
-
-let deleteButtons = document.querySelectorAll(".delete");
-for(delbtn of deleteButtons){
-    delbtn.addEventListener("click", function(){
-     let par = this.parentElement;
-     console.log(par);
-        par.remove();
-    })
+ul.addEventListener("click", function(e){
+    if(e.target.nodeName == "BUTTON"){
+        let listItem = e.target.parentElement;
+        listItem.remove();
+        console.log("delete");
 
 }
+});
+
+
+// let deleteButtons = document.querySelectorAll(".delete");
+// for(delbtn of deleteButtons){
+//     delbtn.addEventListener("click", function(){
+//      let par = this.parentElement;
+//      console.log(par);
+//         par.remove();
+//     })
+
+// }
